@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://csqavsvi3chla"]
+
+[ext_resource type="Script" uid="uid://d0yi7mf11f2lq" path="res://fish_red.gd" id="1_fjdxe"]
+[ext_resource type="Texture2D" uid="uid://dngyvlh0s1ind" path="res://kenney_fish-pack_2.0/PNG/Default/fish_red.png" id="2_pg20r"]
+[ext_resource type="Script" uid="uid://c44qouri6jeyo" path="res://redcollision_shape_2d.gd" id="3_pg20r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6a6wx"]
+size = Vector2(6.125, 4.625)
+
+[node name="RedFish" type="CharacterBody2D"]
+scale = Vector2(10, 10)
+motion_mode = 1
+script = ExtResource("1_fjdxe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.78814e-07, 0)
+shape = SubResource("RectangleShape2D_6a6wx")
+script = ExtResource("3_pg20r")
+
+[node name="FishRed" type="Sprite2D" parent="."]
+position = Vector2(-6.25849e-07, 0.1)
+scale = Vector2(0.0953125, 0.0734375)
+texture = ExtResource("2_pg20r")

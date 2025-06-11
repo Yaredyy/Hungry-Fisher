@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://dvghyacmdnqcb"]
+
+[ext_resource type="Script" uid="uid://3jw6hv07ma85" path="res://pink_fish.gd" id="1_xgyaf"]
+[ext_resource type="Texture2D" uid="uid://dy0vfuv6ju122" path="res://kenney_fish-pack_2.0/PNG/Default/fish_pink.png" id="2_pgmst"]
+[ext_resource type="Script" uid="uid://ca6gv1pj5ytpu" path="res://pinkcollision_shape_2d.gd" id="3_pgmst"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sky72"]
+size = Vector2(4.30001, 3.5)
+
+[node name="PinkFish" type="CharacterBody2D"]
+scale = Vector2(10, 10)
+motion_mode = 1
+script = ExtResource("1_xgyaf")
+
+[node name="FishPink" type="Sprite2D" parent="."]
+position = Vector2(1.3411e-06, 5.06639e-07)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_pgmst")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.0500031, 0.0500002)
+shape = SubResource("RectangleShape2D_sky72")
+script = ExtResource("3_pgmst")

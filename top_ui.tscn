@@ -1,0 +1,57 @@
+[gd_scene load_steps=9 format=3 uid="uid://bed03e5ua4xwi"]
+
+[ext_resource type="Texture2D" uid="uid://cbbj6053bnef4" path="res://kenney_fish-pack_2.0/PNG/Default/bubble_b.png" id="1_ksjps"]
+[ext_resource type="Texture2D" uid="uid://dpp3vrmvcya1o" path="res://kenney_fish-pack_2.0/PNG/Default/bubble_c.png" id="2_jp378"]
+[ext_resource type="Texture2D" uid="uid://b4out12dnxvxb" path="res://kenney_fish-pack_2.0/PNG/Default/fish_red_skeleton.png" id="3_dyjv4"]
+[ext_resource type="Texture2D" uid="uid://p32wmkxf6oxo" path="res://kenney_fish-pack_2.0/PNG/Default/bubble_a.png" id="4_s358w"]
+[ext_resource type="Script" uid="uid://jbuv1j1clhpf" path="res://bubble_a.gd" id="5_y7kpm"]
+[ext_resource type="Script" uid="uid://dv2labg5n5pvb" path="res://score.gd" id="6_dyjv4"]
+[ext_resource type="Texture2D" uid="uid://hp0hngtpcxic" path="res://kenney_fish-pack_2.0/PNG/Default/fish_red_skeleton_outline.png" id="7_s358w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eh0v1"]
+size = Vector2(600, 57)
+
+[node name="CanvasLayer" type="CharacterBody2D"]
+
+[node name="FishRedSkeleton" type="Sprite2D" parent="."]
+position = Vector2(258, 38)
+scale = Vector2(10.625, 1.1875)
+texture = ExtResource("3_dyjv4")
+
+[node name="BubbleC" type="Sprite2D" parent="FishRedSkeleton"]
+position = Vector2(30.3059, 87)
+scale = Vector2(0.127942, 1.48438)
+texture = ExtResource("2_jp378")
+
+[node name="BubbleB" type="Sprite2D" parent="FishRedSkeleton"]
+position = Vector2(28.8, 5)
+scale = Vector2(0.0941176, 1)
+texture = ExtResource("1_ksjps")
+
+[node name="BubbleA" type="Button" parent="FishRedSkeleton"]
+offset_left = 28.0
+offset_top = 30.0
+offset_right = 100.0
+offset_bottom = 325.0
+scale = Vector2(0.05, 0.1)
+icon = ExtResource("4_s358w")
+flat = true
+script = ExtResource("5_y7kpm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(301, 27.5)
+shape = SubResource("RectangleShape2D_eh0v1")
+
+[node name="score" type="Label" parent="."]
+offset_left = 401.0
+offset_top = 62.0
+offset_right = 469.0
+offset_bottom = 85.0
+text = "0"
+horizontal_alignment = 2
+script = ExtResource("6_dyjv4")
+
+[node name="FishRedSkeletonOutline" type="Sprite2D" parent="score"]
+position = Vector2(97, 13)
+scale = Vector2(0.8125, 0.390625)
+texture = ExtResource("7_s358w")
