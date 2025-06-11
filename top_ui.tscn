@@ -9,49 +9,51 @@
 [ext_resource type="Texture2D" uid="uid://hp0hngtpcxic" path="res://kenney_fish-pack_2.0/PNG/Default/fish_red_skeleton_outline.png" id="7_s358w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eh0v1"]
-size = Vector2(600, 57)
+size = Vector2(956, 57)
 
 [node name="CanvasLayer" type="CharacterBody2D"]
 
 [node name="FishRedSkeleton" type="Sprite2D" parent="."]
-position = Vector2(258, 38)
-scale = Vector2(10.625, 1.1875)
+position = Vector2(408, 72)
+scale = Vector2(14.0703, 1.25)
 texture = ExtResource("3_dyjv4")
 
 [node name="BubbleC" type="Sprite2D" parent="FishRedSkeleton"]
-position = Vector2(30.3059, 87)
-scale = Vector2(0.127942, 1.48438)
+position = Vector2(29.5056, 54.1538)
+scale = Vector2(0.067056, 0.902046)
 texture = ExtResource("2_jp378")
 
 [node name="BubbleB" type="Sprite2D" parent="FishRedSkeleton"]
-position = Vector2(28.8, 5)
-scale = Vector2(0.0941176, 1)
+position = Vector2(27.51, 16)
+scale = Vector2(0.0402659, 0.55649)
 texture = ExtResource("1_ksjps")
 
 [node name="BubbleA" type="Button" parent="FishRedSkeleton"]
-offset_left = 28.0
-offset_top = 30.0
-offset_right = 100.0
-offset_bottom = 325.0
+offset_left = 26.9399
+offset_top = 17.2308
+offset_right = 98.9399
+offset_bottom = 312.231
 scale = Vector2(0.05, 0.1)
 icon = ExtResource("4_s358w")
 flat = true
 script = ExtResource("5_y7kpm")
+metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(301, 27.5)
+position = Vector2(455, 44)
 shape = SubResource("RectangleShape2D_eh0v1")
 
 [node name="score" type="Label" parent="."]
-offset_left = 401.0
-offset_top = 62.0
-offset_right = 469.0
-offset_bottom = 85.0
+offset_left = 552.0
+offset_top = 106.0
+offset_right = 620.0
+offset_bottom = 129.0
 text = "0"
 horizontal_alignment = 2
 script = ExtResource("6_dyjv4")
+metadata/_edit_use_anchors_ = true
 
 [node name="FishRedSkeletonOutline" type="Sprite2D" parent="score"]
-position = Vector2(97, 13)
-scale = Vector2(0.8125, 0.390625)
+position = Vector2(100, 16)
+scale = Vector2(0.71875, 0.316406)
 texture = ExtResource("7_s358w")

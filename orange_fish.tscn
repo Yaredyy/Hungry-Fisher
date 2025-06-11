@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://b2deuh0n2uev5"]
+
+[ext_resource type="Script" uid="uid://dta0uwa5e02cf" path="res://orange_fish.gd" id="1_xawb3"]
+[ext_resource type="Script" uid="uid://bwehw44tea3e2" path="res://orangecollision_shape_2d.gd" id="2_d2jxx"]
+[ext_resource type="Texture2D" uid="uid://bubqxfe4ff06r" path="res://kenney_fish-pack_2.0/PNG/Default/fish_orange.png" id="2_kyqmm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d2jxx"]
+size = Vector2(58, 36)
+
+[node name="orange_fish" type="CharacterBody2D"]
+script = ExtResource("1_xawb3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_d2jxx")
+script = ExtResource("2_d2jxx")
+
+[node name="FishOrange" type="Sprite2D" parent="."]
+texture = ExtResource("2_kyqmm")

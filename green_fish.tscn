@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://cglnu1a5eem2r"]
+
+[ext_resource type="Script" uid="uid://di5qrvj31fa0u" path="res://greenfish.gd" id="1_c0gbu"]
+[ext_resource type="Texture2D" uid="uid://dwdd1e1dyov4n" path="res://kenney_fish-pack_2.0/PNG/Default/fish_green.png" id="2_dunxm"]
+[ext_resource type="Script" uid="uid://bje4jkciqufss" path="res://greencollision_shape_2d.gd" id="3_532l2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xq1q1"]
+size = Vector2(62, 41)
+
+[node name="greenfish" type="CharacterBody2D"]
+script = ExtResource("1_c0gbu")
+
+[node name="FishGreen" type="Sprite2D" parent="."]
+position = Vector2(-5, -1)
+texture = ExtResource("2_dunxm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4, 0.5)
+shape = SubResource("RectangleShape2D_xq1q1")
+script = ExtResource("3_532l2")

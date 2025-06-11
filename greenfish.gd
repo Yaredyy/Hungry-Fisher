@@ -1,7 +1,7 @@
 extends CharacterBody2D
 var time2 = Time.get_time_string_from_system()
 
-@export var speed := 180.0
+@export var speed := 125.0
 
 func _ready():
 	# Initialize velocity with a random direction and speed
@@ -22,7 +22,7 @@ func _physics_process(delta):
 	# Clamp position inside screen bounds
 	position = position.clamp(Vector2.ZERO, screen_size)
 	
-	if(((int(Time.get_time_string_from_system().substr(6,2))-int(time2.substr(6,2)))>9)):
+	if(((int(Time.get_time_string_from_system().substr(6,2))-int(time2.substr(6,2)))>24)):
 		self.get_parent().remove_p()
 		self.queue_free()
 	else:

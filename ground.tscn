@@ -4,20 +4,20 @@
 [ext_resource type="Texture2D" uid="uid://bem5u5g2otrrf" path="res://kenney_fish-pack_2.0/PNG/Default/terrain_sand_top_h_outline.png" id="2_tv015"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_am1vj"]
-size = Vector2(597, 48.5)
+size = Vector2(856.5, 47.75)
 
 [node name="CanvasLayer2" type="CharacterBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(299, 378.75)
+position = Vector2(430.75, 386.875)
 shape = SubResource("RectangleShape2D_am1vj")
 
 [node name="TerrainDirtTopA" type="Sprite2D" parent="."]
-position = Vector2(300, 360.5)
-scale = Vector2(9.3125, 0.671875)
+position = Vector2(425.5, 369.5)
+scale = Vector2(13.6406, 0.671875)
 texture = ExtResource("1_t7tip")
 
 [node name="TerrainSandTopHOutline" type="Sprite2D" parent="TerrainDirtTopA"]
-position = Vector2(-0.107383, 31.2558)
-scale = Vector2(0.996644, 1.05099)
+position = Vector2(14.9262, 20.8372)
+scale = Vector2(1.45973, 1.05099)
 texture = ExtResource("2_tv015")

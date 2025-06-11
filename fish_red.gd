@@ -22,7 +22,7 @@ func _physics_process(delta):
 	# Clamp position inside screen bounds
 	position = position.clamp(Vector2.ZERO, screen_size)
 	
-	if(((int(Time.get_time_string_from_system().substr(6,2))-int(time2.substr(6,2)))>5)):
+	if(((int(Time.get_time_string_from_system().substr(6,2))-int(time2.substr(6,2)))>4)):
 		self.get_parent().remove_p()
 		self.queue_free()
 	else:
